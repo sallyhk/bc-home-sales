@@ -7,6 +7,7 @@ def run(filepath="scraping/rew_data.csv"):
     try:
         data = pandas.read_csv(filepath)
         data.drop("Unnamed: 0", axis=1, inplace=True)
+        data = data.dropna()
     except FileNotFoundError:
         raise
 
@@ -16,9 +17,9 @@ def run(filepath="scraping/rew_data.csv"):
     l1, l2 = calc_thresholds(data["$/sq"])
 
     for _, row in data.iterrows():
-        html = make_html(row["$/sq"], row["Area"], row["Price"], row["Link"], row["Address"])
+        html = make_html(row)
         color_fn = color_producer(row["$/sq"], l1, l2)
-        iframe = folium.IFrame(html=html, width=180, height=70)
+        iframe = folium.IFrame(html=html, width=180, height=90)
         fgv.add_child(folium.CircleMarker(location=[row["Latitude"], row["Longitude"]], popup=folium.Popup(iframe),
                                           radius=2, fill_color=color_fn, color=color_fn, fill_opacity=1))
 
