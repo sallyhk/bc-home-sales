@@ -2,13 +2,13 @@ from geopy.geocoders import Nominatim
 from geopy.exc import GeocoderServiceError
 
 
-def ask_for_criteria():
+def ask_for_criteria(n):
+    print(f"\nFor city # {n}")
     city = input("City name: ")
     prov = input("Province name in 2 letters: ")
     max_price = int(input("Max price: "))
     min_beds = int(input("Min number of beds: "))
     min_year_built = int(input("Year built from: "))
-    print("Scraping...")
 
     return (city, prov, max_price, min_beds, min_year_built)
 
