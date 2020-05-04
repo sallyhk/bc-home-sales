@@ -22,7 +22,6 @@ def url_builder(pg, city, prov, price, bed, year):
 
 
 # retries in case of prone service errors
-# credit: https://gis.stackexchange.com/questions/173569/avoid-time-out-error-nominatim-geopy-open-street-maps
 def do_geocode(address, attempt=1, max_attempts=5):
     try:
         return Nominatim().geocode(address)
