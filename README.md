@@ -13,7 +13,7 @@ A few key features of `bc-home-sales` program includes:
 First, open the terminal and `cd` into the directory where you would like to download this program.
 Then, clone the bc-home-sales repository
 ```
-git clone https://github.com/sallykim515/bc-home-sales.git
+git clone https://github.com/sallyhk/bc-home-sales.git
 ```
 Use the following command to run the program:
 ```
