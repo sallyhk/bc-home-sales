@@ -1,9 +1,9 @@
-# bc-home-sales
+# real-estate-analytics
 A python program that scrapes a real estate search website, https://rew.ca, based on user-specified input and creates an interactive color-coded web map. 
 
 
 # Overview
-A few key features of `bc-home-sales` program includes:
+A few key features of `real-estate-analytics` program includes:
 * interactaction with property data in terms of price per ft<sup>2</sup>, an intuitive value assessment measure not readily availble from online property search tools
 * multi-city search and view of the results; absence of nearby area not interested
 * granular filters to fine-tune criteria for each city - e.g. varying prices, number of beds, total area etc. based on cities
@@ -11,9 +11,9 @@ A few key features of `bc-home-sales` program includes:
 
 # Getting Started
 First, open the terminal and `cd` into the directory where you would like to download this program.
-Then, clone the bc-home-sales repository
+Then, clone the real-estate-analytics repository
 ```
-git clone https://github.com/sallyhk/bc-home-sales.git
+git clone https://github.com/sallyhk/real-estate-analytics.git
 ```
 Use the following command to run the program:
 ```
